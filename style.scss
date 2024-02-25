@@ -1,6 +1,194 @@
-@import 'Components/header';
-@import 'Components/reset';
-@import 'Components/title';
+/////////////////////// Variables ///////////////////////
+@import url('https://fonts.google.com/specimen/Sora');
+@import url('https://fonts.google.com/specimen/Vujahday+Script');
+
+// Color
+$primary-color: #ffffff;
+$secondary-color: #FF8000;
+$tertiary-color: #FF85B6;
+$quaternary-color: #DC4AB3;
+
+
+// Font-Size
+$nav-font-size: 20px;
+
+$title-h1-font-size: 170px;
+$title-h1-font-size-1400: 130px;
+$title-h1-font-size-1000: 100px;
+$title-h1-font-size-668: 70px;
+
+$title-h2-font-size: 36px;
+$title-h2-font-size-1000: 30px;
+$title-h2-font-size-600: 28px;
+
+
+// Font-Family
+$primary-font: 'Inter', sans-serif;
+$secondary-font: 'Sora', sans-serif; 
+$tertiary-font: 'Vujahday Script', cursive;   
+
+/////////////////////// Fin Variables ///////////////////////
+
+
+/////////////////////// Reset ///////////////////////
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/////////////////////// Fin Reset ///////////////////////
+
+
+/////////////////////// Title h2 ///////////////////////
+
+.title {
+    color: $primary-color;
+    font-size: $title-h2-font-size;
+    font-family: $primary-font;
+    font-weight: bold;
+
+    text-transform : uppercase;
+
+    @media screen and (max-width: 1000px) {
+        font-size: $title-h2-font-size-1000;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: $title-h2-font-size-600;
+    }
+}
+
+/////////////////////// Fin Title h2 ///////////////////////
+
+
+body {
+    background-color: #000000;
+}
+
+header {
+    nav {
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+            background-color: $primary-color;
+            list-style: none;
+            display: flex;
+            margin-right: 200px;
+            margin-top: 40px;
+            gap: 40px;
+            height: 40px;
+            border-radius: 10px;
+
+            li {
+                color: $secondary-color;
+                font-weight: bold;
+                font-size: $nav-font-size;
+                font-family: $secondary-font;
+                text-transform: uppercase;
+
+                &:nth-child(1) {
+                    margin-left: 20px;
+                }
+
+                &:nth-child(5) {
+                    margin-right: 20px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $secondary-color;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    height: 100px;
+
+    & img {
+        position: absolute;
+        bottom: 10px;
+        left: 2%;
+        width: 5%;
+    }
+
+    & h2 {
+        font-size: 32px;
+        font-weight: bold;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 28px;            
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 24px;            
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 20px;            
+        }
+
+        @media screen and (max-width: 300px) {
+            font-size: 16px;            
+        }
+    }
+}
 
 h1 {
     font-size: $title-h1-font-size;
@@ -9,7 +197,7 @@ h1 {
     color: $primary-color;
     margin-left: 150px;
     line-height: 200px;
-    text-transform : uppercase;
+    text-transform: uppercase;
 
     span {
         color: $secondary-color;
@@ -35,19 +223,21 @@ h1 {
     }
 }
 
+/////////////////////// Page ui_ux ///////////////////////
+
 #chatenay {
     margin-top: 50px;
 
     .chatenay {
-        background-image: url('Assets/chatenay_mockup.png');
+        background-image: url("Assets/chatenay_mockup.png");
         height: 110vh;
-        background-size: cover; 
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
     }
-    
+
     .chatenay-container {
         position: relative;
-     
+
         &-title {
             color: $tertiary-color;
             display: flex;
@@ -68,7 +258,7 @@ h1 {
                 margin-bottom: 50px;
             }
         }
-    
+
         &-img {
             display: flex;
             justify-content: center;
@@ -78,10 +268,10 @@ h1 {
                 align-items: center;
                 gap: 50px;
             }
-    
+
             &-accueil {
                 border-radius: 20px;
-                border: 10px solid rgba(107, 104, 104, 0.4); 
+                border: 10px solid rgba(107, 104, 104, 0.4);
                 position: absolute;
                 top: -250px;
                 left: 10%;
@@ -100,13 +290,12 @@ h1 {
                 @media screen and (max-width: 750px) {
                     width: 80%;
                 }
-    
             }
-    
+
             &-nav {
                 width: 45%;
                 border-radius: 20px;
-                border: 10px solid rgba(107, 104, 104, 0.4); 
+                border: 10px solid rgba(107, 104, 104, 0.4);
                 position: absolute;
                 bottom: -650px;
                 right: 12%;
@@ -132,12 +321,10 @@ h1 {
                 @media screen and (max-width: 750px) {
                     width: 80%;
                 }
-    
             }
         }
     }
 }
-
 
 #darkbull {
     margin-top: 70%;
@@ -147,15 +334,15 @@ h1 {
     }
 
     .darkbull {
-        background-image: url('Assets/darkbull_mockup.png');
+        background-image: url("Assets/darkbull_mockup.png");
         height: 110vh;
-        background-size: cover; 
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
     }
-    
+
     .darkbull-container {
         margin-top: 100px;
-        display: flex; 
+        display: flex;
         justify-content: center;
         gap: 100px;
 
@@ -178,11 +365,10 @@ h1 {
                 align-items: center;
             }
         }
-        
 
         &-title {
             margin-block: 100px;
-            text-align: center; 
+            text-align: center;
             color: $secondary-color;
 
             @media screen and (max-width: 1250px) {
@@ -193,7 +379,7 @@ h1 {
         &-img-accueil {
             border-radius: 20px;
             border: 10px solid rgba(0, 0, 0, 0.2);
-            
+
             @media screen and (max-width: 900px) {
                 width: 80%;
             }
@@ -210,7 +396,6 @@ h1 {
                 width: 60%;
             }
         }
-    
     }
 }
 
@@ -219,15 +404,15 @@ h1 {
     position: relative;
 
     .jekaze {
-        background-image: url('Assets/jekaze_mockup.png');
+        background-image: url("Assets/jekaze_mockup.png");
         height: 110vh;
-        background-size: cover; 
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
     }
-    
+
     .jekaze-container {
         margin-block: 100px;
-        display: flex; 
+        display: flex;
         justify-content: center;
 
         @media screen and (max-width: 1150px) {
@@ -236,7 +421,7 @@ h1 {
         }
 
         &-title {
-            margin-bottom: 50px;   
+            margin-bottom: 50px;
             color: $primary-color;
 
             @media screen and (max-width: 1150px) {
@@ -291,7 +476,6 @@ h1 {
             position: absolute;
             bottom: -900px;
             right: 16.5%;
-            
 
             @media screen and (max-width: 1600px) {
                 right: 12%;
@@ -318,7 +502,6 @@ h1 {
                 width: 80%;
             }
         }
-    
     }
 }
 
@@ -331,15 +514,15 @@ h1 {
     }
 
     .andalousia {
-        background-image: url('Assets/andalousia_mockup.png');
+        background-image: url("Assets/andalousia_mockup.png");
         height: 110vh;
-        background-size: cover; 
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
     }
-    
+
     .andalousia-container {
         margin-block: 100px;
-        display: flex; 
+        display: flex;
         justify-content: center;
 
         @media screen and (max-width: 1300px) {
@@ -362,7 +545,7 @@ h1 {
             position: absolute;
             bottom: -1050px;
             left: 12%;
-            
+
             @media screen and (max-width: 1600px) {
                 left: 10%;
             }
@@ -393,7 +576,7 @@ h1 {
             right: 12%;
             z-index: 1;
             border-radius: 20px;
-            border: 10px solid rgba(107, 104, 104, 0.9); 
+            border: 10px solid rgba(107, 104, 104, 0.9);
 
             @media screen and (max-width: 1600px) {
                 right: 10%;
@@ -414,83 +597,518 @@ h1 {
                 width: 80%;
             }
         }
-    
     }
 }
 
 #portfolio {
     margin-top: 1200px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 
     @media screen and (max-width: 1300px) {
         margin-top: 30px;
     }
 
     .portfolio {
-        background-image: url('Assets/portfolio_mockup.png');
+        background-image: url("Assets/portfolio_mockup.png");
         height: 110vh;
-        background-size: cover; 
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
+
+        &-title {
+            margin-top: 100px;
+            text-align: center;
+
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(35deg, #da58ad 0%, #fb98a8 100%);
+        }
+
+        &-tablette {
+            position: relative;
+
+            @media screen and (max-width: 900px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            &-img-tablette {
+                width: 55%;
+                margin-left: 15%;
+
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+
+            &-img-loading {
+                width: 40%;
+                position: absolute;
+                bottom: -130px;
+                right: 17%;
+
+                @media screen and (max-width: 900px) {
+                    position: relative;
+                    bottom: 0;
+                    right: 0;
+                    width: 70%;
+                }
+            }
+        }
+
+        &-container {
+            margin-top: 250px;
+            margin-inline: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+
+            @media screen and (max-width: 1250px) {
+                gap: 50px;
+                margin-inline: 100px;
+            }
+            @media screen and (max-width: 1250px) {
+                gap: 20px;
+            }
+            @media screen and (max-width: 1100px) {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 900px) {
+                margin-top: 50px;
+            }
+
+            @media screen and (max-width: 600px) {
+                margin-inline: 50px;
+            }
+
+            &-img-white {
+                border-radius: 20px;
+                width: 70%;
+
+                @media screen and (max-width: 1100px) {
+                    width: 110%;
+                }
+
+                @media screen and (max-width: 700px) {
+                    width: 100%;
+                }
+
+
+            }
+
+            &-img-black {
+                width: 70%;
+                border-radius: 20px;
+
+                @media screen and (max-width: 1100px) {
+                    width: 110%;
+                }
+
+                @media screen and (max-width: 700px) {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+}
+
+/////////////////////// Fin Page ui_ux ///////////////////////
+
+/////////////////////// Page Illustration ///////////////////////
+
+#debauche {
+    margin-top: 50px;
+    position: relative;
+
+    .debauche {
+        background-image: url("./Assets/debauche_accueil.png");
+        height: 110vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .debauche-img-perso {
+        position: absolute;
+        top: 26%;
+        left: 5%;
+        width: 25%;
+
+        @media screen and (max-width: 1150px) {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            width: 60%;
+        }
+        @media screen and (max-width: 750px) {
+            width: 80%;
+        }
+    
     }
     
-    .portfolio-container {
-        margin-top: 100px;
-        display: flex; 
+    .debauche-title {
+        margin-block: 150px 100px;
+        text-align: center;
+        font-size: 100px;
+    }
+
+    .debauche-container {
+        display: flex;
         justify-content: center;
+        gap: 100px;
+        
+        &-dessin {
+            position: absolute;
+            bottom: 150px;
+            right: 8%;
+        }
+    }
+
+    .debauche-fleche {
+        position: absolute;
+        bottom: 50px;
+        right: 18%;
+    }
+
+    .debauche-text-fleche {
+        position: absolute;
+        bottom: 0px;
+        right: 8%;
+        font-size: 25px;
+        line-height: 30px;
+        color: #FFFFFF;
+        font-family: 'Vujahday Script', cursive;
+    }
+
+    .debauche-text {
+        margin-inline: auto;
+        margin-top: 100px;
+        width: 50%;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 23px;
+        line-height: 30px;
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+#salle703 {
+    margin-top: 100px;
+    
+    .salle703 {
+        background-image: url("Assets/salle703_accueil.png");
+        height: 110vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .salle703-container {
+        margin-top: 100px;
+        margin-inline: 200px;
+        display: flex;
         gap: 100px;
 
         @media screen and (max-width: 1250px) {
-            gap: 50px;
-        }
-        @media screen and (max-width: 1250px) {
-            gap: 20px;
-        }
-        @media screen and (max-width: 1100px) {
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
+            margin-top: 50px;
+        }
+
+        &-flex{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
         }
 
         &-title {
             margin-bottom: 100px;
-            text-align: center;
-    
-            background-clip: text;
-            color: transparent; 
-            background-image: linear-gradient(35deg, #DA58AD 0%, #FB98A8 100%);;
-        }
+            text-align: right;
+            color: #FFFFFF;
+            font-size: 150px;
 
-        &-flex {
-            @media screen and (max-width: 1100px) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            @media screen and (max-width: 1250px) {
+                margin-block: 20px;
+            }
+
+            & span {
+                color: #DE3434;
             }
         }
 
-        &-img-white {
+        &-text {
+            margin-block: 100px;
+            text-align: center;
+           
+            color: #FFFFFF;
+            font-size: 20px;
+            font-family: 'inter', sans-serif;
+
+            @media screen and (max-width: 1250px) {
+                margin-block: 20px;
+            }
+
+            & span {
+                color: #DE3434;
+            }
+        }
+
+        &-img-couleur {
             border-radius: 20px;
 
-            @media screen and (max-width: 1100px) {
-                width: 110%;
-            }
-            
-
-            @media screen and (max-width: 700px) {
-                width: 100%;
-            }
-
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 900px) {
                 width: 80%;
             }
         }
 
-        &-img-black {
-            border-radius: 20px;
-            @media screen and (max-width: 700px) {
-                width: 100%;
+        &-img-noir {
+
+            @media screen and (max-width: 900px) {
+                width: 80%;
             }
-            
+
+            @media screen and (max-width: 668px) {
+                width: 60%;
+            }
         }
+    }
+}
+
+#belle {
+    margin-top: 100px;
+    position: relative;
+
+    .belle {
+        background-image: url("Assets/belle_accueil.png");
+        height: 110vh;
+        background-size: cover;
+        background-position: center;
+
+        &-title {
+            padding-top: 150px;
+            padding-left: 150px;
+            font-size: 130px;
+            line-height: 150px;
+        }
+
+        &-fleche-courbe {
+            position: absolute;
+            top: 57%;
+            left: 150px;
+            color: #FFFFFF;
+            font-size: 20px;
+            line-height: 30px;
+            font-family: 'vujaDay Script', cursive;
+            font-style: italic;
+        }
+
+        &-text-courbe {
+            position: absolute;
+            top: 54%;
+            left: 150px;
+            width: 50%;
+            color: #FFFFFF;
+            font-size: 23px;
+            line-height: 30px;
+            font-family: 'vujaDay Script', cursive;
+            font-style: italic;
+        }
+    }
+
+    .belle-container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        color: #FFFFFF;
+
+        @media screen and (max-width: 1150px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-text {
+            text-align: center;
+            margin-top: 6%;
+            width: 35%;
+            line-height: 25px;
+            font-family: 'Inter', sans-serif;
+        }        
+    }
+
+    .belle-img {
+        position: absolute;
+        bottom: -16%;
+        right: 15%;
+    }
+
+    .belle-fleche-droite {
+        position: absolute;
+        bottom: -20%;
+        right: 20%;
+    }
+
+    .belle-text-droite {
+        color: #FFFFFF;
+        font-size: 23px;
+        line-height: 30px;
+        font-family: 'vujaDay Script', cursive;
+        font-style: italic;
+        position: absolute;
+        bottom: -22%;
+        right: 18%;
+    }
+}
+
+#batman {
+    margin-top: 500px;
+    position: relative;
+
+    @media screen and (max-width: 1150px) {
+        margin-top: 30px;
+    }
+
+    .batman {
+        background-image: url("Assets/batman_accueil.png");
+        height: 110vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .batman-container {
+        margin-block: 200px;
+
+        @media screen and (max-width: 1300px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        &-flex {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    .batman-fleche-courbe-bas {
+        position: absolute;
+        top: 55%;
+        right: 30%;
+    }
+
+    .batman-text-bas {
+        position: absolute;
+        top: 54%;
+        left: 72%;
+        width: 50%;
+        color: #FFFFFF;
+        font-size: 23px;
+        line-height: 30px;
+        font-family: 'vujaDay Script', cursive;
+        font-style: italic;
+    }
+
+    .batman-fleche-courbe-haut {
+        position: absolute;
+        bottom: 150px;
+        left: 25%;
+    }
+
+    .batman-text-haut {
+        position: absolute;
+        bottom: 140px;
+        left: 13%;
+        width: 50%;
+        color: #FFFFFF;
+        font-size: 23px;
+        line-height: 30px;
+        font-family: 'vujaDay Script', cursive;
+        font-style: italic;
+    }
+
+    .batman-text {
+        margin-left: 40%;
+        margin-top: 100px;
+        width: 50%;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 15px;
+        line-height: 25px;
+        font-family: 'Inter', sans-serif;
     
     }
 }
+
+#lunateek {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: 1300px) {
+        margin-top: 30px;
+    }
+
+    .lunateek {
+        background-image: url("Assets/lunateek_accueil.png");
+        height: 110vh;
+        background-size: cover;
+        background-position: center;
+
+        &-text {
+            margin-top: 100px;
+            margin-inline: auto;
+            width: 60%;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 15px;
+            line-height: 25px;
+            font-family: 'Inter', sans-serif;
+        }
+    }     
+
+    .lunateek-container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &-1 {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        &-2 {
+            display: flex;
+            justify-items: center;
+            gap: 40px;
+            margin-bottom: 50px;
+
+            &-noflex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }  
+        }
+
+        &-3 {
+            display: flex;
+            gap: 70px;
+
+        }
+    }
+}
+
+
+
+/////////////////////// Fin Page Illustration ///////////////////////

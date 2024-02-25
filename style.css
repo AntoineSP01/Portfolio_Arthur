@@ -1,34 +1,5 @@
 @import url("https://fonts.google.com/specimen/Sora");
-header nav {
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-header nav ul {
-  list-style: none;
-  display: flex;
-  margin-right: 200px;
-  margin-top: 40px;
-  gap: 40px;
-}
-header nav ul li {
-  margin-left: 20px;
-  color: #FF8000;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: "Sora", sans-serif;
-  text-transform: uppercase;
-}
-header nav ul li a {
-  text-decoration: none;
-  color: #FF8000;
-  font-weight: bold;
-}
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
+@import url("https://fonts.google.com/specimen/Vujahday+Script");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,7 +50,7 @@ table {
 }
 
 .title {
-  color: #000000;
+  color: #ffffff;
   font-size: 36px;
   font-family: "Inter", sans-serif;
   font-weight: bold;
@@ -96,11 +67,94 @@ table {
   }
 }
 
+body {
+  background-color: #000000;
+}
+
+header nav {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  list-style: none;
+  display: flex;
+  margin-right: 200px;
+  margin-top: 40px;
+  gap: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+header nav ul li {
+  color: #FF8000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Sora", sans-serif;
+  text-transform: uppercase;
+}
+header nav ul li:nth-child(1) {
+  margin-left: 20px;
+}
+header nav ul li:nth-child(5) {
+  margin-right: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #FF8000;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  height: 100px;
+}
+#footer img {
+  position: absolute;
+  bottom: 10px;
+  left: 2%;
+  width: 5%;
+}
+#footer h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+  #footer h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #footer h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #footer h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #footer h2 {
+    font-size: 16px;
+  }
+}
+
 h1 {
   font-size: 170px;
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   margin-left: 150px;
   line-height: 200px;
   text-transform: uppercase;
@@ -345,7 +399,7 @@ h1 span {
 }
 #jekaze .jekaze-container-title {
   margin-bottom: 50px;
-  color: #000000;
+  color: #ffffff;
 }
 @media screen and (max-width: 1150px) {
   #jekaze .jekaze-container-title {
@@ -549,7 +603,7 @@ h1 span {
 
 #portfolio {
   margin-top: 1200px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 @media screen and (max-width: 1300px) {
   #portfolio {
@@ -562,8 +616,52 @@ h1 span {
   background-size: cover;
   background-position: center;
 }
-#portfolio .portfolio-container {
+#portfolio .portfolio-title {
   margin-top: 100px;
+  text-align: center;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(35deg, #da58ad 0%, #fb98a8 100%);
+}
+#portfolio .portfolio-tablette {
+  position: relative;
+}
+@media screen and (max-width: 900px) {
+  #portfolio .portfolio-tablette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+#portfolio .portfolio-tablette-img-tablette {
+  width: 55%;
+  margin-left: 15%;
+}
+@media screen and (max-width: 900px) {
+  #portfolio .portfolio-tablette-img-tablette {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#portfolio .portfolio-tablette-img-loading {
+  width: 40%;
+  position: absolute;
+  bottom: -130px;
+  right: 17%;
+}
+@media screen and (max-width: 900px) {
+  #portfolio .portfolio-tablette-img-loading {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+  }
+}
+#portfolio .portfolio-container {
+  margin-top: 250px;
+  margin-inline: 200px;
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -571,6 +669,7 @@ h1 span {
 @media screen and (max-width: 1250px) {
   #portfolio .portfolio-container {
     gap: 50px;
+    margin-inline: 100px;
   }
 }
 @media screen and (max-width: 1250px) {
@@ -584,22 +683,19 @@ h1 span {
     align-items: center;
   }
 }
-#portfolio .portfolio-container-title {
-  margin-bottom: 100px;
-  text-align: center;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(35deg, #DA58AD 0%, #FB98A8 100%);
+@media screen and (max-width: 900px) {
+  #portfolio .portfolio-container {
+    margin-top: 50px;
+  }
 }
-@media screen and (max-width: 1100px) {
-  #portfolio .portfolio-container-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 600px) {
+  #portfolio .portfolio-container {
+    margin-inline: 50px;
   }
 }
 #portfolio .portfolio-container-img-white {
   border-radius: 20px;
+  width: 70%;
 }
 @media screen and (max-width: 1100px) {
   #portfolio .portfolio-container-img-white {
@@ -611,13 +707,14 @@ h1 span {
     width: 100%;
   }
 }
-@media screen and (max-width: 550px) {
-  #portfolio .portfolio-container-img-white {
-    width: 80%;
-  }
-}
 #portfolio .portfolio-container-img-black {
+  width: 70%;
   border-radius: 20px;
+}
+@media screen and (max-width: 1100px) {
+  #portfolio .portfolio-container-img-black {
+    width: 110%;
+  }
 }
 @media screen and (max-width: 700px) {
   #portfolio .portfolio-container-img-black {
@@ -625,4 +722,356 @@ h1 span {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+#debauche {
+  margin-top: 50px;
+  position: relative;
+}
+#debauche .debauche {
+  background-image: url("./Assets/debauche_accueil.png");
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+}
+#debauche .debauche-img-perso {
+  position: absolute;
+  top: 26%;
+  left: 5%;
+  width: 25%;
+}
+@media screen and (max-width: 1150px) {
+  #debauche .debauche-img-perso {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #debauche .debauche-img-perso {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 750px) {
+  #debauche .debauche-img-perso {
+    width: 80%;
+  }
+}
+#debauche .debauche-title {
+  margin-block: 150px 100px;
+  text-align: center;
+  font-size: 100px;
+}
+#debauche .debauche-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+#debauche .debauche-container-dessin {
+  position: absolute;
+  bottom: 150px;
+  right: 8%;
+}
+#debauche .debauche-fleche {
+  position: absolute;
+  bottom: 50px;
+  right: 18%;
+}
+#debauche .debauche-text-fleche {
+  position: absolute;
+  bottom: 0px;
+  right: 8%;
+  font-size: 25px;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-family: "Vujahday Script", cursive;
+}
+#debauche .debauche-text {
+  margin-inline: auto;
+  margin-top: 100px;
+  width: 50%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 23px;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+#salle703 {
+  margin-top: 100px;
+}
+#salle703 .salle703 {
+  background-image: url("Assets/salle703_accueil.png");
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+}
+#salle703 .salle703-container {
+  margin-top: 100px;
+  margin-inline: 200px;
+  display: flex;
+  gap: 100px;
+}
+@media screen and (max-width: 1250px) {
+  #salle703 .salle703-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+#salle703 .salle703-container-flex {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#salle703 .salle703-container-title {
+  margin-bottom: 100px;
+  text-align: right;
+  color: #FFFFFF;
+  font-size: 150px;
+}
+@media screen and (max-width: 1250px) {
+  #salle703 .salle703-container-title {
+    margin-block: 20px;
+  }
+}
+#salle703 .salle703-container-title span {
+  color: #DE3434;
+}
+#salle703 .salle703-container-text {
+  margin-block: 100px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: "inter", sans-serif;
+}
+@media screen and (max-width: 1250px) {
+  #salle703 .salle703-container-text {
+    margin-block: 20px;
+  }
+}
+#salle703 .salle703-container-text span {
+  color: #DE3434;
+}
+#salle703 .salle703-container-img-couleur {
+  border-radius: 20px;
+}
+@media screen and (max-width: 900px) {
+  #salle703 .salle703-container-img-couleur {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #salle703 .salle703-container-img-noir {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 668px) {
+  #salle703 .salle703-container-img-noir {
+    width: 60%;
+  }
+}
+
+#belle {
+  margin-top: 100px;
+  position: relative;
+}
+#belle .belle {
+  background-image: url("Assets/belle_accueil.png");
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+}
+#belle .belle-title {
+  padding-top: 150px;
+  padding-left: 150px;
+  font-size: 130px;
+  line-height: 150px;
+}
+#belle .belle-fleche-courbe {
+  position: absolute;
+  top: 57%;
+  left: 150px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "vujaDay Script", cursive;
+  font-style: italic;
+}
+#belle .belle-text-courbe {
+  position: absolute;
+  top: 54%;
+  left: 150px;
+  width: 50%;
+  color: #FFFFFF;
+  font-size: 23px;
+  line-height: 30px;
+  font-family: "vujaDay Script", cursive;
+  font-style: italic;
+}
+#belle .belle-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1150px) {
+  #belle .belle-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#belle .belle-container-text {
+  text-align: center;
+  margin-top: 6%;
+  width: 35%;
+  line-height: 25px;
+  font-family: "Inter", sans-serif;
+}
+#belle .belle-img {
+  position: absolute;
+  bottom: -16%;
+  right: 15%;
+}
+#belle .belle-fleche-droite {
+  position: absolute;
+  bottom: -20%;
+  right: 20%;
+}
+#belle .belle-text-droite {
+  color: #FFFFFF;
+  font-size: 23px;
+  line-height: 30px;
+  font-family: "vujaDay Script", cursive;
+  font-style: italic;
+  position: absolute;
+  bottom: -22%;
+  right: 18%;
+}
+
+#batman {
+  margin-top: 500px;
+  position: relative;
+}
+@media screen and (max-width: 1150px) {
+  #batman {
+    margin-top: 30px;
+  }
+}
+#batman .batman {
+  background-image: url("Assets/batman_accueil.png");
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+}
+#batman .batman-container {
+  margin-block: 200px;
+}
+@media screen and (max-width: 1300px) {
+  #batman .batman-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+}
+#batman .batman-container-flex {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+#batman .batman-fleche-courbe-bas {
+  position: absolute;
+  top: 55%;
+  right: 30%;
+}
+#batman .batman-text-bas {
+  position: absolute;
+  top: 54%;
+  left: 72%;
+  width: 50%;
+  color: #FFFFFF;
+  font-size: 23px;
+  line-height: 30px;
+  font-family: "vujaDay Script", cursive;
+  font-style: italic;
+}
+#batman .batman-fleche-courbe-haut {
+  position: absolute;
+  bottom: 150px;
+  left: 25%;
+}
+#batman .batman-text-haut {
+  position: absolute;
+  bottom: 140px;
+  left: 13%;
+  width: 50%;
+  color: #FFFFFF;
+  font-size: 23px;
+  line-height: 30px;
+  font-family: "vujaDay Script", cursive;
+  font-style: italic;
+}
+#batman .batman-text {
+  margin-left: 40%;
+  margin-top: 100px;
+  width: 50%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Inter", sans-serif;
+}
+
+#lunateek {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1300px) {
+  #lunateek {
+    margin-top: 30px;
+  }
+}
+#lunateek .lunateek {
+  background-image: url("Assets/lunateek_accueil.png");
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+}
+#lunateek .lunateek-text {
+  margin-top: 100px;
+  margin-inline: auto;
+  width: 60%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Inter", sans-serif;
+}
+#lunateek .lunateek-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#lunateek .lunateek-container-1 {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+#lunateek .lunateek-container-2 {
+  display: flex;
+  justify-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+#lunateek .lunateek-container-2-noflex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+#lunateek .lunateek-container-3 {
+  display: flex;
+  gap: 70px;
+}/*# sourceMappingURL=style.css.map */
