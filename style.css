@@ -1,18 +1,86 @@
 @import url("https://fonts.google.com/specimen/Sora");
 @import url("https://fonts.google.com/specimen/Vujahday+Script");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,8 +89,17 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -30,16 +107,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -71,40 +152,99 @@ body {
   background-color: #000000;
 }
 
+.menu-open {
+  margin-bottom: 150px;
+}
+
+header .burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media screen and (max-width: 668px) {
+  header .burger-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
 header nav {
   padding: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 100;
+}
+@media screen and (max-width: 1000px) {
+  header nav {
+    justify-content: center;
+  }
 }
 header nav ul {
   display: flex;
   align-items: center;
   background-color: #ffffff;
   list-style: none;
-  display: flex;
   margin-right: 200px;
   margin-top: 40px;
   gap: 40px;
   height: 40px;
   border-radius: 10px;
 }
+@media screen and (max-width: 1000px) {
+  header nav ul {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 668px) {
+  header nav ul {
+    display: none;
+    border: #000000 1px solid;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    height: auto;
+    text-align: center;
+  }
+}
 header nav ul li {
-  color: #FF8000;
+  color: #ff8000;
   font-weight: bold;
   font-size: 20px;
   font-family: "Sora", sans-serif;
   text-transform: uppercase;
 }
+@media screen and (max-width: 668px) {
+  header nav ul li {
+    margin-top: 20px;
+  }
+}
+header nav ul li:nth-child(even) {
+  display: none;
+}
 header nav ul li:nth-child(1) {
   margin-left: 20px;
+}
+@media screen and (max-width: 668px) {
+  header nav ul li:nth-child(1) {
+    margin-left: 0;
+  }
 }
 header nav ul li:nth-child(5) {
   margin-right: 20px;
 }
+@media screen and (max-width: 668px) {
+  header nav ul li:nth-child(5) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 header nav ul li a {
   text-decoration: none;
-  color: #FF8000;
+  color: #ff8000;
   font-weight: bold;
 }
 header nav ul li a:hover {
@@ -116,7 +256,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   height: 100px;
 }
 #footer img {
@@ -160,30 +300,36 @@ h1 {
   text-transform: uppercase;
 }
 h1 span {
-  color: #FF8000;
+  color: #ff8000;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1550px) {
   h1 {
     font-size: 130px;
     line-height: normal;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   h1 {
     font-size: 100px;
     line-height: normal;
   }
 }
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 1000px) {
   h1 {
     font-size: 70px;
     line-height: normal;
   }
 }
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 750px) {
   h1 {
-    text-align: center;
-    margin: 0;
+    font-size: 40px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 30px;
+    margin-top: 30px;
   }
 }
 
@@ -200,7 +346,7 @@ h1 span {
   position: relative;
 }
 #chatenay .chatenay-container-title {
-  color: #FF85B6;
+  color: #ff85b6;
   display: flex;
   justify-content: flex-end;
   text-align: center;
@@ -346,7 +492,7 @@ h1 span {
 #darkbull .darkbull-container-title {
   margin-block: 100px;
   text-align: center;
-  color: #FF8000;
+  color: #ff8000;
 }
 @media screen and (max-width: 1250px) {
   #darkbull .darkbull-container-title {
@@ -524,7 +670,7 @@ h1 span {
 }
 #andalousia .andalousia-container-title {
   margin-bottom: 200px;
-  color: #DC4AB3;
+  color: #dc4ab3;
 }
 @media screen and (max-width: 1300px) {
   #andalousia .andalousia-container-title {
@@ -738,22 +884,47 @@ h1 span {
   left: 5%;
   width: 25%;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1680px) {
   #debauche .debauche-img-perso {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 50%;
+    top: 31%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   #debauche .debauche-img-perso {
-    width: 60%;
+    top: 34%;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1090px) {
   #debauche .debauche-img-perso {
-    width: 80%;
+    top: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #debauche .debauche-img-perso {
+    top: 16%;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 680px) {
+  #debauche .debauche-img-perso {
+    top: 20%;
+  }
+}
+@media screen and (max-width: 580px) {
+  #debauche .debauche-img-perso {
+    top: 23%;
+    width: 35%;
+  }
+}
+@media screen and (max-width: 450px) {
+  #debauche .debauche-img-perso {
+    top: 26%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #debauche .debauche-img-perso {
+    top: 32%;
+    width: 40%;
   }
 }
 #debauche .debauche-title {
@@ -761,20 +932,87 @@ h1 span {
   text-align: center;
   font-size: 100px;
 }
+@media screen and (max-width: 1250px) {
+  #debauche .debauche-title {
+    margin-block: 50px 50px;
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #debauche .debauche-title {
+    margin-block: 50px 20px;
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 540px) {
+  #debauche .debauche-title {
+    font-size: 40px;
+  }
+}
 #debauche .debauche-container {
   display: flex;
   justify-content: center;
   gap: 100px;
 }
+@media screen and (max-width: 1372px) {
+  #debauche .debauche-container {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #debauche .debauche-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-inline: 50px;
+  }
+}
+#debauche .debauche-container-img {
+  width: 100%;
+}
 #debauche .debauche-container-dessin {
   position: absolute;
   bottom: 150px;
   right: 8%;
+  width: 20%;
+}
+@media screen and (max-width: 1600px) {
+  #debauche .debauche-container-dessin {
+    right: 7%;
+  }
+}
+@media screen and (max-width: 1550px) {
+  #debauche .debauche-container-dessin {
+    right: 5%;
+  }
+}
+@media screen and (max-width: 1372px) {
+  #debauche .debauche-container-dessin {
+    right: 1%;
+  }
+}
+@media screen and (max-width: 470px) {
+  #debauche .debauche-container-dessin {
+    right: 40%;
+    bottom: 16%;
+    width: 40%;
+  }
 }
 #debauche .debauche-fleche {
   position: absolute;
   bottom: 50px;
   right: 18%;
+}
+@media screen and (max-width: 892px) {
+  #debauche .debauche-fleche {
+    right: 13%;
+  }
+}
+@media screen and (max-width: 470px) {
+  #debauche .debauche-fleche {
+    right: 60%;
+    bottom: 13%;
+  }
 }
 #debauche .debauche-text-fleche {
   position: absolute;
@@ -782,18 +1020,49 @@ h1 span {
   right: 8%;
   font-size: 25px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Vujahday Script", cursive;
+}
+@media screen and (max-width: 892px) {
+  #debauche .debauche-text-fleche {
+    right: 2%;
+  }
+}
+@media screen and (max-width: 470px) {
+  #debauche .debauche-text-fleche {
+    right: 25%;
+    bottom: 12%;
+    font-size: 20px;
+  }
 }
 #debauche .debauche-text {
   margin-inline: auto;
   margin-top: 100px;
   width: 50%;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 23px;
   line-height: 30px;
   font-family: "Inter", sans-serif;
+}
+@media screen and (max-width: 800px) {
+  #debauche .debauche-text {
+    margin-inline: 0;
+    text-align: start;
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #debauche .debauche-text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 470px) {
+  #debauche .debauche-text {
+    margin-top: 350px;
+    width: 90%;
+    text-align: center;
+  }
 }
 
 #salle703 {
@@ -813,34 +1082,52 @@ h1 span {
 }
 @media screen and (max-width: 1250px) {
   #salle703 .salle703-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     margin-top: 50px;
+    margin-inline: 0;
+    gap: 50px;
   }
 }
 #salle703 .salle703-container-flex {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
 #salle703 .salle703-container-title {
   margin-bottom: 100px;
   text-align: right;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 150px;
 }
 @media screen and (max-width: 1250px) {
   #salle703 .salle703-container-title {
     margin-block: 20px;
+    font-size: 130px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #salle703 .salle703-container-title {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #salle703 .salle703-container-title {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #salle703 .salle703-container-title {
+    font-size: 60px;
   }
 }
 #salle703 .salle703-container-title span {
-  color: #DE3434;
+  color: #de3434;
 }
 #salle703 .salle703-container-text {
   margin-block: 100px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   font-family: "inter", sans-serif;
 }
@@ -850,25 +1137,13 @@ h1 span {
   }
 }
 #salle703 .salle703-container-text span {
-  color: #DE3434;
+  color: #de3434;
 }
 #salle703 .salle703-container-img-couleur {
   border-radius: 20px;
 }
-@media screen and (max-width: 900px) {
-  #salle703 .salle703-container-img-couleur {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 900px) {
-  #salle703 .salle703-container-img-noir {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 668px) {
-  #salle703 .salle703-container-img-noir {
-    width: 60%;
-  }
+#salle703 .salle703-container-img-noir {
+  border-radius: 20px;
 }
 
 #belle {
@@ -886,38 +1161,71 @@ h1 span {
   padding-left: 150px;
   font-size: 130px;
   line-height: 150px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+@media screen and (max-width: 1250px) {
+  #belle .belle-title {
+    padding-left: 50px;
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #belle .belle-title {
+    padding-left: 20px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #belle .belle-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #belle .belle-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 #belle .belle-fleche-courbe {
   position: absolute;
   top: 57%;
   left: 150px;
-  color: #FFFFFF;
-  font-size: 20px;
-  line-height: 30px;
-  font-family: "vujaDay Script", cursive;
-  font-style: italic;
+}
+@media screen and (max-width: 1150px) {
+  #belle .belle-fleche-courbe {
+    display: none;
+  }
 }
 #belle .belle-text-courbe {
   position: absolute;
   top: 54%;
   left: 150px;
   width: 50%;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 23px;
   line-height: 30px;
   font-family: "vujaDay Script", cursive;
   font-style: italic;
+}
+@media screen and (max-width: 1150px) {
+  #belle .belle-text-courbe {
+    display: none;
+  }
 }
 #belle .belle-container {
   margin-top: 100px;
   display: flex;
   justify-content: center;
   gap: 100px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media screen and (max-width: 1150px) {
   #belle .belle-container {
-    flex-direction: column;
+    margin-top: 0;
+    flex-direction: column-reverse;
     align-items: center;
   }
 }
@@ -928,18 +1236,46 @@ h1 span {
   line-height: 25px;
   font-family: "Inter", sans-serif;
 }
+@media screen and (max-width: 1150px) {
+  #belle .belle-container-text {
+    width: 90%;
+    margin-top: 50px;
+  }
+}
+#belle .belle-container-img-accueil {
+  width: 50%;
+}
+@media screen and (max-width: 1150px) {
+  #belle .belle-container-img-accueil {
+    width: 90%;
+  }
+}
 #belle .belle-img {
   position: absolute;
   bottom: -16%;
   right: 15%;
+}
+@media screen and (max-width: 1150px) {
+  #belle .belle-img {
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
 }
 #belle .belle-fleche-droite {
   position: absolute;
   bottom: -20%;
   right: 20%;
 }
+@media screen and (max-width: 1150px) {
+  #belle .belle-fleche-droite {
+    display: none;
+  }
+}
 #belle .belle-text-droite {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 23px;
   line-height: 30px;
   font-family: "vujaDay Script", cursive;
@@ -947,6 +1283,11 @@ h1 span {
   position: absolute;
   bottom: -22%;
   right: 18%;
+}
+@media screen and (max-width: 1150px) {
+  #belle .belle-text-droite {
+    display: none;
+  }
 }
 
 #batman {
@@ -974,52 +1315,166 @@ h1 span {
     gap: 50px;
   }
 }
+@media screen and (max-width: 500px) {
+  #batman .batman-container {
+    margin-block: 50px;
+  }
+}
 #batman .batman-container-flex {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+@media screen and (max-width: 1250px) {
+  #batman .batman-container-flex {
+    flex-direction: column;
+    margin-inline: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #batman .batman-container-flex {
+    margin-inline: 20px;
+  }
 }
 #batman .batman-fleche-courbe-bas {
   position: absolute;
   top: 55%;
   right: 30%;
 }
+@media screen and (max-width: 1250px) {
+  #batman .batman-fleche-courbe-bas {
+    top: 30%;
+    right: 30%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  #batman .batman-fleche-courbe-bas {
+    top: 32%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #batman .batman-fleche-courbe-bas {
+    top: 36%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #batman .batman-fleche-courbe-bas {
+    top: 42%;
+    left: 20%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #batman .batman-fleche-courbe-bas {
+    display: none;
+  }
+}
 #batman .batman-text-bas {
   position: absolute;
   top: 54%;
   left: 72%;
   width: 50%;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 23px;
   line-height: 30px;
   font-family: "vujaDay Script", cursive;
   font-style: italic;
+}
+@media screen and (max-width: 1250px) {
+  #batman .batman-text-bas {
+    top: 30%;
+    right: 15%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  #batman .batman-text-bas {
+    top: 32%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #batman .batman-text-bas {
+    top: 36%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #batman .batman-text-bas {
+    top: 42%;
+    left: 50%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #batman .batman-text-bas {
+    display: none;
+  }
 }
 #batman .batman-fleche-courbe-haut {
   position: absolute;
   bottom: 150px;
   left: 25%;
 }
+@media screen and (max-width: 1150px) {
+  #batman .batman-fleche-courbe-haut {
+    bottom: 250px;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  #batman .batman-fleche-courbe-haut {
+    display: none;
+  }
+}
 #batman .batman-text-haut {
   position: absolute;
   bottom: 140px;
   left: 13%;
   width: 50%;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 23px;
   line-height: 30px;
   font-family: "vujaDay Script", cursive;
   font-style: italic;
+}
+@media screen and (max-width: 1530px) {
+  #batman .batman-text-haut {
+    left: 10%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #batman .batman-text-haut {
+    bottom: 250px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #batman .batman-text-haut {
+    display: none;
+  }
 }
 #batman .batman-text {
   margin-left: 40%;
   margin-top: 100px;
   width: 50%;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 15px;
   line-height: 25px;
   font-family: "Inter", sans-serif;
+}
+@media screen and (max-width: 1150px) {
+  #batman .batman-text {
+    margin-inline: auto;
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #batman .batman-text {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #batman .batman-text {
+    font-size: 13px;
+    width: 90%;
+  }
 }
 
 #lunateek {
@@ -1029,6 +1484,11 @@ h1 span {
 @media screen and (max-width: 1300px) {
   #lunateek {
     margin-top: 30px;
+  }
+}
+@media screen and (max-width: 730px) {
+  #lunateek img {
+    width: 100%;
   }
 }
 #lunateek .lunateek {
@@ -1042,10 +1502,20 @@ h1 span {
   margin-inline: auto;
   width: 60%;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 15px;
   line-height: 25px;
   font-family: "Inter", sans-serif;
+}
+@media screen and (max-width: 900px) {
+  #lunateek .lunateek-text {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #lunateek .lunateek-text {
+    font-size: 13px;
+  }
 }
 #lunateek .lunateek-container {
   margin-top: 100px;
@@ -1053,17 +1523,30 @@ h1 span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-inline: 50px;
 }
 #lunateek .lunateek-container-1 {
   display: flex;
   gap: 40px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 730px) {
+  #lunateek .lunateek-container-1 {
+    flex-direction: column;
+  }
 }
 #lunateek .lunateek-container-2 {
   display: flex;
   justify-items: center;
   gap: 40px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 730px) {
+  #lunateek .lunateek-container-2 {
+    flex-direction: column;
+  }
 }
 #lunateek .lunateek-container-2-noflex {
   display: flex;
@@ -1074,4 +1557,10 @@ h1 span {
 #lunateek .lunateek-container-3 {
   display: flex;
   gap: 70px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 730px) {
+  #lunateek .lunateek-container-3 {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
